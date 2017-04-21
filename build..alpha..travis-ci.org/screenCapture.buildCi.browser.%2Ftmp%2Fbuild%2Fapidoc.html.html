@@ -1,0 +1,551 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>ibm-blockchain-js (v1.3.2)</a>
+</h1>
+<h4>A library for easily interacting with IBM Blockchain.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ibm-blockchain-js">module ibm-blockchain-js</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ibm-blockchain-js.ibm-blockchain-js">
+            function <span class="apidocSignatureSpan"></span>ibm-blockchain-js
+            <span class="apidocSignatureSpan">(log_outputs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">ibm-blockchain-js.</span>lastBlock</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">ibm-blockchain-js.</span>lastPoll</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">ibm-blockchain-js.</span>selectedPeer</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ibm-blockchain-js.</span>chaincode</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ibm-blockchain-js.</span>helper</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ibm-blockchain-js.</span>q</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ibm-blockchain-js.</span>rest</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ibm-blockchain-js.helper">module ibm-blockchain-js.helper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ibm-blockchain-js.helper.eFmt">
+            function <span class="apidocSignatureSpan">ibm-blockchain-js.helper.</span>eFmt
+            <span class="apidocSignatureSpan">(name, code, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ibm-blockchain-js.helper.filter_users">
+            function <span class="apidocSignatureSpan">ibm-blockchain-js.helper.</span>filter_users
+            <span class="apidocSignatureSpan">(users)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ibm-blockchain-js.helper.removeThing">
+            function <span class="apidocSignatureSpan">ibm-blockchain-js.helper.</span>removeThing
+            <span class="apidocSignatureSpan">(dir, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ibm-blockchain-js.rest">module ibm-blockchain-js.rest</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ibm-blockchain-js.rest.delete">
+            function <span class="apidocSignatureSpan">ibm-blockchain-js.rest.</span>delete
+            <span class="apidocSignatureSpan">(l_options, query_params, body, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ibm-blockchain-js.rest.get">
+            function <span class="apidocSignatureSpan">ibm-blockchain-js.rest.</span>get
+            <span class="apidocSignatureSpan">(l_options, query_params, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ibm-blockchain-js.rest.head">
+            function <span class="apidocSignatureSpan">ibm-blockchain-js.rest.</span>head
+            <span class="apidocSignatureSpan">(l_options, query_params, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ibm-blockchain-js.rest.init">
+            function <span class="apidocSignatureSpan">ibm-blockchain-js.rest.</span>init
+            <span class="apidocSignatureSpan">(opt, log_outputs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ibm-blockchain-js.rest.post">
+            function <span class="apidocSignatureSpan">ibm-blockchain-js.rest.</span>post
+            <span class="apidocSignatureSpan">(l_options, query_params, body, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ibm-blockchain-js.rest.put">
+            function <span class="apidocSignatureSpan">ibm-blockchain-js.rest.</span>put
+            <span class="apidocSignatureSpan">(l_options, query_params, body, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ibm-blockchain-js" id="apidoc.module.ibm-blockchain-js">module ibm-blockchain-js</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ibm-blockchain-js.ibm-blockchain-js" id="apidoc.element.ibm-blockchain-js.ibm-blockchain-js">
+        function <span class="apidocSignatureSpan"></span>ibm-blockchain-js
+        <span class="apidocSignatureSpan">(log_outputs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ibc(log_outputs) {
+	if(log_outputs &amp;&amp; log_outputs.info) logger.log = log_outputs.info;		//send normal logs here
+	if(log_outputs &amp;&amp; log_outputs.error) logger.error = log_outputs.error;	//send error logs here
+	if(log_outputs &amp;&amp; log_outputs.warn) logger.warn = log_outputs.warn;		//send warn logs here
+	if(log_outputs &amp;&amp; log_outputs.debug) logger.debug = log_outputs.debug;	//send debug logs here
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ibm-blockchain-js.helper" id="apidoc.module.ibm-blockchain-js.helper">module ibm-blockchain-js.helper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ibm-blockchain-js.helper.eFmt" id="apidoc.element.ibm-blockchain-js.helper.eFmt">
+        function <span class="apidocSignatureSpan">ibm-blockchain-js.helper.</span>eFmt
+        <span class="apidocSignatureSpan">(name, code, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function eFmt(name, code, details){							//my error format
+	return 	{
+		name: String(name),															//error short name
+		code: Number(code),															//http code when applicable
+		details: details															//error description
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	if(!options.network || !options.network.peers) errors.push('the option "network.peers" is required');
+
+	if(!options.chaincode || !options.chaincode.zip_url) errors.push('the option "chaincode.zip_url" is required'
+;);
+	if(!options.chaincode || !options.chaincode.unzip_dir) errors.push('the option "chaincode.unzip_dir" is required
+');
+	if(!options.chaincode || !options.chaincode.git_url) errors.push('the option "chaincode.git_url" is required'
+;);
+	if(errors.length &gt; 0){															//check for input errors
+		logger.error('! [ibc-js] Input Error - ibc.load()', errors);
+		if(cb) cb(helper.<span class="apidocCodeKeywordSpan">eFmt</span>('load() input error', 400, errors));
+		return;																		//get out of dodge
+	}
+
+	ibc.chaincode = {																//empty it all
+					query: {
+						read: read
+					},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ibm-blockchain-js.helper.filter_users" id="apidoc.element.ibm-blockchain-js.helper.filter_users">
+        function <span class="apidocSignatureSpan">ibm-blockchain-js.helper.</span>filter_users
+        <span class="apidocSignatureSpan">(users)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filter_users = function (users){										//this is only needed in a permissioned network
+	var valid_users = [];
+	for(var i = 0; i &lt; users.length; i++) {
+		if(users[i].enrollId.indexOf('user_type1') === 0){							//type should be 1 for client
+			valid_users.push(users[i]);
+		}
+	}
+	return valid_users;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ibm-blockchain-js.helper.removeThing" id="apidoc.element.ibm-blockchain-js.helper.removeThing">
+        function <span class="apidocSignatureSpan">ibm-blockchain-js.helper.</span>removeThing
+        <span class="apidocSignatureSpan">(dir, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeThing = function (dir, cb){
+	//console.log('!', dir);
+	fs.readdir(dir, function (err, files) {
+		if(err != null || !files || files.length === 0){
+			cb();
+		}
+		else{
+			async.each(files, function (file, cb) {							//over each thing
+				file = path.join(dir, file);
+				fs.stat(file, function(err, stat) {
+					if (err) {
+						if(cb) cb(err);
+						return;
+					}
+					if (stat.isDirectory()) {
+						module.exports.removeThing(file, cb);				//keep going
+					}
+					else {
+						//console.log('!', dir);
+						fs.unlink(file, function(err) {
+							if (err) {
+								if(cb) cb(err);
+								return;
+							}
+							//console.log('good', dir);
+							if(cb) cb();
+							return;
+						});
+					}
+				});
+			}, function (err) {
+				if(err){
+					if(cb) cb(err);
+					return;
+				}
+				fs.rmdir(dir, function (err) {
+					if(cb) cb(err);
+					return;
+				});
+			});
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+// ============================================================================================================================
+// EXTERNAL - clear() - clear the temp directory
+// ============================================================================================================================
+ibc.prototype.clear =  function(cb){
+	logger.log('[ibc-js] removing temp dir');
+	helper.<span class="apidocCodeKeywordSpan">removeThing</span>(tempDirectory, cb);											//remove everything in this directory
+};
+
+//============================================================================================================================
+// EXTERNAL chain_stats() - get blockchain stats
+//============================================================================================================================
+ibc.prototype.chain_stats =  function(cb){
+	var options = {path: '/chain'};													//very simple API, get chainstats!
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ibm-blockchain-js.rest" id="apidoc.module.ibm-blockchain-js.rest">module ibm-blockchain-js.rest</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ibm-blockchain-js.rest.delete" id="apidoc.element.ibm-blockchain-js.rest.delete">
+        function <span class="apidocSignatureSpan">ibm-blockchain-js.rest.</span>delete
+        <span class="apidocSignatureSpan">(l_options, query_params, body, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function (l_options, query_params, body, cb){
+	l_options.method = 'DELETE';
+	http_req(l_options, query_params, body, 1 , cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	var options = {
+		path: '/registrar/' + enrollId,
+		host: ibc.chaincode.details.peers[index].api_host,
+		port: pick_port(index),
+		ssl: ibc.chaincode.details.peers[index].tls
+	};
+
+	rest.<span class="apidocCodeKeywordSpan">delete</span>(options, null, null, function(statusCode, data){
+		if(statusCode != null){
+			logger.log('[ibc-js] Unregistering - failure:', enrollId, statusCode);
+			if(cb) cb(helper.eFmt('unregister() error', statusCode, data), null);
+		}
+		else {
+			logger.log('[ibc-js] Unregistering success:', enrollId);
+			ibc.chaincode.details.peers[index].enrollId = null;								//unremember a valid enrollId for this peer
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ibm-blockchain-js.rest.get" id="apidoc.element.ibm-blockchain-js.rest.get">
+        function <span class="apidocSignatureSpan">ibm-blockchain-js.rest.</span>get
+        <span class="apidocSignatureSpan">(l_options, query_params, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (l_options, query_params, cb){
+	l_options.method = 'GET';
+	http_req(l_options, query_params, null, 1 , cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			logger.error('! [ibc-js] Download error');
+			fs.unlink(zip_dest); 														//delete the file async
+			if (cb) cb(helper.eFmt('doad_chaincode() download error', 500, err.message), ibc.chaincode);
+		};
+
+		var protocol = download_url.split('://')[0];
+		if(protocol === 'https') {														//choose http or https
+			https.<span class="apidocCodeKeywordSpan">get</span>(download_url, handleResponse).on('error', handleError);
+		}
+		else{
+			http.get(download_url, handleResponse).on('error', handleError);
+		}
+	}
+
+	// Step 1.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ibm-blockchain-js.rest.head" id="apidoc.element.ibm-blockchain-js.rest.head">
+        function <span class="apidocSignatureSpan">ibm-blockchain-js.rest.</span>head
+        <span class="apidocSignatureSpan">(l_options, query_params, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">head = function (l_options, query_params, cb){
+	l_options.method = 'HEAD';
+	http_req(l_options, query_params, null, 1 , cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ibm-blockchain-js.rest.init" id="apidoc.element.ibm-blockchain-js.rest.init">
+        function <span class="apidocSignatureSpan">ibm-blockchain-js.rest.</span>init
+        <span class="apidocSignatureSpan">(opt, log_outputs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (opt, log_outputs){
+	for(var i in opt){
+		default_options[i] = JSON.parse(JSON.stringify(opt[i]));
+	}
+	
+	if(log_outputs &amp;&amp; log_outputs.info) logger.log = log_outputs.info;		//send normal logs here
+	if(log_outputs &amp;&amp; log_outputs.error) logger.error = log_outputs.error;	//send error logs here
+	if(log_outputs &amp;&amp; log_outputs.warn) logger.warn = log_outputs.warn;		//send warn logs here
+	if(log_outputs &amp;&amp; log_outputs.debug) logger.debug = log_outputs.debug;	//send debug logs here
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				temp.name = arrayPeers[i].id.substring(pos) + '-' + arrayPeers[i].id.substring(0, 12) + '...:' + arrayPeers
+[i].api_port;
+			}
+	
+			logger.log('[ibc-js] Peer: ', temp.name);									//print the friendly name
+			ibc.chaincode.details.peers.push(temp);
+		}
+
+		rest.<span class="apidocCodeKeywordSpan">init</span>({																		//load default values for rest call to peer
+					host: ibc.chaincode.details.peers[0].api_host,
+					port: pick_port(0),
+					headers: {
+								'Content-Type': 'application/json',
+								'Accept': 'application/json',
+							},
+					ssl: ibc.chaincode.details.peers[0].tls,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ibm-blockchain-js.rest.post" id="apidoc.element.ibm-blockchain-js.rest.post">
+        function <span class="apidocSignatureSpan">ibm-blockchain-js.rest.</span>post
+        <span class="apidocSignatureSpan">(l_options, query_params, body, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">post = function (l_options, query_params, body, cb){
+	l_options.method = 'POST';
+	http_req(l_options, query_params, body, 1 , cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+						args: args
+					},
+					secureContext: enrollId
+				},
+				id: Date.now()
+	};
+
+	rest.<span class="apidocCodeKeywordSpan">post</span>(options, null, body, function(statusCode, data){
+		if(statusCode != null){
+			logger.error('[ibc-js] (Read) - failure:', statusCode);
+			if(cb) cb(helper.eFmt('read() error', statusCode, data), null);
+		}
+		else{
+			logger.log('[ibc-js] (Read) - success:', data);
+			if(cb){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ibm-blockchain-js.rest.put" id="apidoc.element.ibm-blockchain-js.rest.put">
+        function <span class="apidocSignatureSpan">ibm-blockchain-js.rest.</span>put
+        <span class="apidocSignatureSpan">(l_options, query_params, body, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">put = function (l_options, query_params, body, cb){
+	l_options.method = 'PUT';
+	http_req(l_options, query_params, body, 1 , cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
